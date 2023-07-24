@@ -46,8 +46,13 @@ int main(int argc, char *argv[])
         }
     }
 
+    if (outfile != NULL)
+    {
+        fclose(outfile); // Close the file if it's still open.
+    }
+
     fclose(infile);
     free(buffer);
 
-    printf("%i", image_count);
+    printf("There were %i files.\n")
 }
